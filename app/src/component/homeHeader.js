@@ -1,17 +1,23 @@
 //import package
-import React, {useState} from 'react';
-import {View, Text, TouchableOpacity, StyleSheet, FlatList} from 'react-native';
+import React, { useState } from "react";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  FlatList,
+} from "react-native";
 
 //import helper
-import {Colors} from '../helper/colors';
-import {Fonts} from '../helper/Fonts';
-import {Images} from '../helper/images';
+import { Colors } from "../helper/colors";
+import { Fonts } from "../helper/Fonts";
+import { Images } from "../helper/images";
 
-const HomeHeader = props => {
+const HomeHeader = (props) => {
   //props
-  const {setTabIndex, tabIndex, tablist} = props;
+  const { setTabIndex, tabIndex, tablist } = props;
 
-  const renderItems = ({item, index}) => {
+  const renderItems = ({ item, index }) => {
     return (
       <TouchableOpacity
         onPress={() => {
@@ -19,19 +25,22 @@ const HomeHeader = props => {
             index: index,
             label: item?.name,
           });
-        }}>
+        }}
+      >
         <View
           style={{
-            alignSelf: 'center',
+            alignSelf: "center",
             marginStart: 10,
             marginHorizontal: 10,
-          }}>
+          }}
+        >
           <Text
             style={{
               color: tabIndex?.index == index ? Colors.white : Colors.black,
               fontSize: 14,
               fontFamily: Fonts.BOLD,
-            }}>
+            }}
+          >
             {item.name}
           </Text>
         </View>
@@ -41,16 +50,17 @@ const HomeHeader = props => {
   return (
     <View style={styles.container}>
       <View style={styles.mainView}>
-        <Text style={styles.text}>Whatsapp</Text>
+        <Text style={styles.text}>ChatApp</Text>
         <View
           style={{
-            alignItems: 'center',
-            flexDirection: 'row',
-          }}>
+            alignItems: "center",
+            flexDirection: "row",
+          }}
+        >
           <TouchableOpacity>
             <Images.search />
           </TouchableOpacity>
-          <View style={{marginLeft: 20}}>
+          <View style={{ marginLeft: 20 }}>
             <TouchableOpacity>
               <Images.dot />
             </TouchableOpacity>
@@ -61,8 +71,9 @@ const HomeHeader = props => {
         style={{
           marginTop: 20,
           marginHorizontal: 15,
-          flexDirection: 'row',
-        }}>
+          flexDirection: "row",
+        }}
+      >
         <TouchableOpacity>
           <Images.camera />
         </TouchableOpacity>
@@ -70,14 +81,17 @@ const HomeHeader = props => {
         <FlatList
           showsVerticalScrollIndicator={false}
           data={tablist}
-          keyExtractor={item => item.id}
+          keyExtractor={(item) => item.id}
           horizontal={true}
           renderItem={renderItems}
-          contentContainerStyle={{flexGrow: 1, justifyContent: 'space-around'}}
+          contentContainerStyle={{
+            flexGrow: 1,
+            justifyContent: "space-around",
+          }}
         />
       </View>
 
-      <View style={{marginBottom: 20}} />
+      <View style={{ marginBottom: 20 }} />
     </View>
   );
 };
@@ -88,8 +102,8 @@ const styles = StyleSheet.create({
   mainView: {
     marginTop: 20,
     marginHorizontal: 20,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
   text: {
     color: Colors.white,
