@@ -1,13 +1,14 @@
-import logo from '../../assets/images/logo.svg';
-import search from '../../assets/images/Search.svg';
-import dot from '../../assets/images/dot.svg';
-import camera from '../../assets/images/camera.svg';
-import arrow from '../../assets/images/arrow.svg';
-import video from '../../assets/images/video.svg';
-import phone from '../../assets/images/phone.svg';
-import emoji from '../../assets/images/emoji.svg';
-import attachment from '../../assets/images/attachment.svg';
-import payment from '../../assets/images/payment.svg';
+import logo from "../../assets/images/logo.svg";
+import search from "../../assets/images/Search.svg";
+import dot from "../../assets/images/dot.svg";
+import camera from "../../assets/images/camera.svg";
+import arrow from "../../assets/images/arrow.svg";
+import video from "../../assets/images/video.svg";
+import phone from "../../assets/images/phone.svg";
+import emoji from "../../assets/images/emoji.svg";
+import attachment from "../../assets/images/attachment.svg";
+import payment from "../../assets/images/payment.svg";
+import send from "../../assets/images/send.svg";
 
 export const Images = {
   //svg
@@ -21,7 +22,8 @@ export const Images = {
   attachment: attachment,
   payment: payment,
   emoji: emoji,
+  send: send,
 
   //png
-  user: require('../../assets/images/user.png'),
+  user: require("../../assets/images/user.png"),
 };
