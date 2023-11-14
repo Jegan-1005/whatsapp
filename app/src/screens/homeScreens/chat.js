@@ -24,6 +24,7 @@ const Chat = (props) => {
       <ScrollView></ScrollView>
       <Input setInput={setInput} input={input} />
 
+      <Images.viewAll width={20} height={20} />
       <View style={{ marginBottom: 20 }} />
     </>
   );

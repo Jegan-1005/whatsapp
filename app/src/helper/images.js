@@ -9,6 +9,7 @@ import emoji from "../../assets/images/emoji.svg";
 import attachment from "../../assets/images/attachment.svg";
 import payment from "../../assets/images/payment.svg";
 import send from "../../assets/images/send.svg";
+import viewAll from "../../assets/images/viewAll.svg";
 
 export const Images = {
   //svg
@@ -23,6 +24,7 @@ export const Images = {
   payment: payment,
   emoji: emoji,
   send: send,
+  viewAll: viewAll,
 
   //png
   user: require("../../assets/images/user.png"),
